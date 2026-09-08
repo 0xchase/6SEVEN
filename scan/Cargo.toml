@@ -1,0 +1,20 @@
+[package]
+name = "scan"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rand.workspace = true
+thiserror = { workspace = true }
+tokio = { version = "1.0", features = ["macros", "rt", "sync", "time"] }
+tokio-util = { version = "0.7", features = ["rt"] }
+flume = "0.11"
+
+probe = { path = "../probe" }
+link = { path = "../link" }
+sixseven-core = { path = "../core" }
+sixseven-formats = { path = "../formats" }
+
+[dev-dependencies]
+serde_json.workspace = true
+tga = { path = "../tga" }

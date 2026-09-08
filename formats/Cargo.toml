@@ -1,0 +1,13 @@
+[package]
+name = "sixseven-formats"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sixseven-core = { path = "../core" }
+serde_json.workspace = true
+tempfile = "3.8"
+serde = { workspace = true, features = ["derive"] }
+thiserror = { workspace = true }
+csv = "1.3"
+tokio = { version = "1.0", features = ["rt", "fs", "io-util"] }

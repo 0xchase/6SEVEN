@@ -1,0 +1,15 @@
+[package]
+name = "analyze"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sixseven-core = { path = "../core" }
+clap          = { workspace = true, features = ["derive"] }
+serde         = { workspace = true }
+ipnet = "2.9.0"
+
+# Tracing dependencies
+
+[lib]
+path = "src/lib.rs"

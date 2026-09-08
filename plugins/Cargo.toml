@@ -1,0 +1,18 @@
+[package]
+name = "sixseven-plugins"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sixseven-core = { path = "../core" }
+serde.workspace = true
+serde_json.workspace = true
+libloading = "0.8"
+base64 = "0.22"
+
+[dev-dependencies]
+tempfile = "3.8"
+
+[[example]]
+name = "native_tga"
+crate-type = ["cdylib"]

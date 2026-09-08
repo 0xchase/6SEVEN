@@ -1,0 +1,21 @@
+[package]
+name = "sixseven-profile"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+scan = { path = "../scan" }
+sixseven-core = { path = "../core" }
+
+anyhow = { workspace = true }
+clap = { workspace = true, features = ["derive"] }
+indicatif = "0.17.7"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread", "time"] }
+
+link = { path = "../link" }
+probe = { path = "../probe" }
+tga = { path = "../tga", default-features = false }
+
+[[bin]]
+name = "6seven-profile"
+path = "src/main.rs"
